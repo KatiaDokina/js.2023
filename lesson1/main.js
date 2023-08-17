@@ -27,9 +27,16 @@ let middleName = 'Kateryna'
 let lastName = 'Ivanivna'
 let person = firstName +' ' + middleName +' ' +lastName;
 console.log(person);
+let person1 = `${firstName} ${middleName} ${lastName};`
+console.log(person1);
 let a = 100;
 console.log(typeof a);
 let b = '100';
 console.log(typeof b);
-let c = true
+let c = true;
 console.log(typeof c);
+let nameUser = prompt('Enter your name');
+let lastName1 = prompt('Enter your lastName');
+let age = prompt('Enter your age');
+let result = `${nameUser} ${lastName1} ${age}`;
+console.log(result);
