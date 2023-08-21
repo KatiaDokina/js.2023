@@ -93,14 +93,21 @@ console.log(users[9].password);
 
 let x=5
 if (x>0 || x<0) {
-    x=true
-}
-else {
+    x = true;
+}else {
     x=false;
 }
 console.log(x);
+let a = prompt ('Test the script with a equal to 1, 0, -3')
+if (a>0 || a<0) {
+    a=true
+}
+else {
+    a=false;
+}
+console.log(a);
 
-let time = prompt ('which quarter the number falls into');
+let time = prompt ('to what quarter of an hour does the number fall');
 if(time >=0 && time <=15){
     console.log('I quarter');
 }else if (time >15 && time <=30){
@@ -110,7 +117,7 @@ if(time >=0 && time <=15){
 }else if (time >45 && time<=59){
     console.log('IV quarter');
 }else {
-    console.log('???')
+    console.log('again');
 }
 
 let day = prompt('in which decade of the month does the number fall')
@@ -121,7 +128,7 @@ if(day >=1 && day <=10){
 }else if (day >20 && day<=31){
     console.log('III decade');
 }else {
-    console.log('???')
+    console.log('again')
 }
 
 let week = +prompt ('enter number of the day of the week')
@@ -148,5 +155,53 @@ switch (week) {
         console.log('Sunday');
         break;
     default:
-        console.log('???');
+        console.log('again');
+}
+
+let b = 100;
+let c = 50;
+if (b>c){
+    console.log(b)
+}else if (b<c){
+    console.log(c)
+}else if (b===c){
+    console.log(b || c)
+}
+
+let k = 25;
+let l = 10;
+if (k>l || k<l){
+    console.log(k || l)
+}else if (k===l){
+    console.log(k || l)
+}
+
+let color = prompt('color') || 'defolt';
+console.log(color);
+
+let coursesAndDurationArray = [
+    {title: 'JavaScript Complex', monthDuration: 5},
+    {title: 'Java Complex', monthDuration: 6},
+    {title: 'Python Complex', monthDuration: 6},
+    {title: 'QA Complex', monthDuration: 4},
+    {title: 'FullStack', monthDuration: 7},
+    {title: 'Frontend', monthDuration: 4}
+];
+if (coursesAndDurationArray[0].monthDuration >5){
+    console.log('super')
+}
+if (coursesAndDurationArray[1].monthDuration >5){
+    console.log('super')
+}
+if (coursesAndDurationArray[2].monthDuration >5){
+    console.log('super')
+}
+if (coursesAndDurationArray[3].monthDuration >5){
+    console.log('super')
+}
+if (coursesAndDurationArray[4].monthDuration >5){
+    console.log('super')
+}
+if (coursesAndDurationArray[5].monthDuration >5){
+    console.log('super')
 }
