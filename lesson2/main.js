@@ -91,21 +91,12 @@ console.log(users[7].password);
 console.log(users[8].password);
 console.log(users[9].password);
 
-let x=5
-if (x>0 || x<0) {
-    x = true;
+let x=1
+if (x !==0) {
+    console.log('Вірно')
 }else {
-    x=false;
+    console.log('Невірно')
 }
-console.log(x);
-let a = prompt ('Test the script with a equal to 1, 0, -3')
-if (a>0 || a<0) {
-    a=true
-}
-else {
-    a=false;
-}
-console.log(a);
 
 let time = prompt ('to what quarter of an hour does the number fall');
 if(time >=0 && time <=15){
@@ -131,7 +122,7 @@ if(day >=1 && day <=10){
     console.log('again')
 }
 
-let week = +prompt ('enter number of the day of the week')
+let week = 1
 switch (week) {
     case 1:
         console.log('Monday');
@@ -158,23 +149,18 @@ switch (week) {
         console.log('again');
 }
 
-let b = 100;
-let c = 50;
-if (b>c){
-    console.log(b)
-}else if (b<c){
-    console.log(c)
-}else if (b===c){
-    console.log(b || c)
+let FirstNum = 100;
+let SecondNum = 150;
+if (FirstNum>SecondNum){
+    console.log('FirstNum: ', FirstNum);
+}else if (FirstNum<SecondNum){
+    console.log('SecondNum: ', SecondNum)
+}else if (FirstNum===SecondNum){
+    console.log('equal')
+}else {
+    console.error(Error)
 }
 
-let k = 25;
-let l = 10;
-if (k>l || k<l){
-    console.log(k || l)
-}else if (k===l){
-    console.log(k || l)
-}
 
 let color = prompt('color') || 'defolt';
 console.log(color);
