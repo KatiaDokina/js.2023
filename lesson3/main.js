@@ -36,10 +36,12 @@ document.write(`<h1>Title - ${[text]}</h1>`)
 // </ul>
 // замість 'ITEM OF ARRAY' підставити елемент з масиву щоб получився цілий список з даними з масиву
 let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
+document.write(`<ul>`)
 for (let listOfItem of listOfItems) {
     console.log(listOfItem)
-    document.write(`<ul><li>${listOfItem}</li></ul>`)
+    document.write(`<li>${listOfItem}</li>`)
 }
+document.write(`</ul`)
 //Використовуючи данні з масиву, за допомоги document.write та циклу
 // побудувати структуру по шаблону
 // Великими літерами прописанні властивості об'єкту які потрібно впровадити в шаблон
