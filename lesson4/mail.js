@@ -83,47 +83,73 @@ function arrayPrimitive(list) {
 let elements = ['brown', 145, true, false, 'white', 478, 965]
 arrayPrimitive(elements)
 // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
-let users = [
+let users1 = [
     {id: 1, name: 'vasya', age: 31},
     {id: 2, name: 'petya', age: 30},
     {id: 3, name: 'kolya', age: 29},
     {id: 4, name: 'olya', age: 28}
 ]
-
-    for (const user of users) {
-        for (const key in user) {
-            console.log(key + '-' + user[key])
-        }
-        console.log('-------------')
+function object(array) {
+    for (let user of array) {
+        document.write(`<div>${user.id} ${user.name} ${user.age}</div>`)
     }
-// - створити функцію яка повертає найменьше число з масиву
+}
+
+object(users1)
+// // - створити функцію яка повертає найменьше число з масиву
+let numbers = [21, 10, 101, 74, 85, 89, 6]
+
+function numbersFilter(numbersArr) {
+    let minNumber = numbersArr[0];
+    for (let number of numbersArr) {
+        if (number < minNumber) {
+            minNumber = number;
+        }
+    }
+    return minNumber;
+}
+
+console.log(numbersFilter(numbers))
+
 // - створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
-function sum() {
-        const arr = (Array.from(arguments));
-        let result = 0;
+function sum(arr) {
+    let result = 0;
     for (let number of arr) {
         result = result + number;
     }
-    console.log(result)
+    return result
 }
-sum(1, 4, 7, 17, 11, 5, 7, 8)
+
+console.log(sum([1, 4, 7, 17, 11, 5, 7, 8]))
 // - створити функцію swap(arr,index1,index2). Функція міняє місцями заняення у відаовідних індексах
 // Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
+let arr1 = [77, 44, 55, 74, 33]
 
+function swap(Array, index1, index2) {
+    const firstElement = Array[index1];
+    const secondElement = Array[index2]
+    Array[index1] = secondElement
+    Array[index2] = firstElement
+    console.log(arr1)
+}
+
+swap(arr1, 0, 1)
 
 // - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
 // Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250
 let arrayValues = [
-    {currency:'USD',value:40},
-    {currency:'EUR',value:42}
+    {currency: 'USD', value: 40},
+    {currency: 'EUR', value: 42}
 ]
-let n = 10000;
-let result = 250;
-for (let i = 0; i < arrayValues.length; i++) {
-    const arrayValue = arrayValues[i];
-    console.log(arrayValue)
-    if (n/arrayValue.value===result){
-        console.log(true)
-    }else console.log(false)
 
-}
+function exchange(sumUAH,currencyValues,exchangeCurrency){
+    let result = 0;
+    for (let currencyValue of currencyValues) {
+        if (currencyValue.currency === exchangeCurrency){
+            result = sumUAH/currencyValue.value
+        }
+    }
+     return result;
+    }
+console.log(exchange(10000,arrayValues,'USD'))
+
