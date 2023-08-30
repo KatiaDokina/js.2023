@@ -1,3 +1,25 @@
+// <!--template 1.1-->
+// <div class="wrap">
+//     <div class="post-card">
+//         <h3>ID - TITLE</h3>
+//         <p>BODY</p>
+//     </div>
+//
+//     <!--
+//     ...
+//     ...
+//     ...
+//     other posts
+//     -->
+//
+// </div>
+//
+//
+// <script>
+//     /*За допомогою циклу вивести всю інформацію про пости використовуючи шаблон Template 1.1.
+//     * ЗА допомоги стилів побудувати структуру "сітки" по 5 об'єктів в лінію
+//     * */
+
 users100 = [
     {
         userId: 1,
@@ -600,13 +622,11 @@ users100 = [
         body: 'cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut'
     }
 ];
-
+document.write(`<div class="wrap">`)
 for (let user of users100) {
-   document.write(` <div className="wrap">
-        <div className="post-card">
+    document.write(`<div class="post-card">
             <h3>ID ${user.id} - TITLE ${user.title}</h3>
             <p>BODY ${user.body}</p>
-        </div>
-    </div>`)
-
+        </div>`)
 }
+document.write(`</div>`)
