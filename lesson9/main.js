@@ -13,10 +13,10 @@ document.body.appendChild(div)
 div.appendChild(p)
 // - клонувати його повністю, та додати клон в body.
 div.append(p, p.cloneNode(true))
+
 // - Є масив:
 // ['Main','Products','About us','Contacts']
 // Зробити ul в середині якої будуть лежати елементи масиву (кожен в своєму li)
-
 let arr = ['Main', 'Products', 'About us', 'Contacts']
 let ul = document.createElement('ul')
 document.body.appendChild(ul)
@@ -196,23 +196,16 @@ let CoursesArray = [
     }
 ];
 
-// for (const coursesArrayElement of CoursesArray) {
-//     console.log(coursesArrayElement)
-//     let modules = coursesArrayElement.modules
-//     for (const modulesKey in modules) {
-//         console.log(modules[modulesKey])
-//     }
-// }
-
-
 // Створити для кожного елементу масиву свій блок, блок розділити блоками, в яких будуть зберігатись значення окремих властивостей, для властивості modules зробити список з елементами
 // Приклад структири знаходиться у файлі example.png який лежить в папці з поточним фйлом
 for (const coursesArrayElement of CoursesArray) {
     let main = document.createElement('main');
+    main.classList.add('main')
     let header = document.createElement('header');
     header.classList.add('title');
     header.innerText = `title: ${coursesArrayElement.title}`;
     let div = document.createElement('div');
+    div.classList.add('div')
     let div1 = document.createElement('div1');
     div1.classList.add('monthDuration');
     div1.innerText = `monthDuration: ${coursesArrayElement.monthDuration}`
@@ -221,19 +214,15 @@ for (const coursesArrayElement of CoursesArray) {
     div2.innerText = `hourDuration: ${coursesArrayElement.hourDuration}`;
     let section = document.createElement('section')
     section.innerText = `modules:`
+    section.classList.add('modules')
     let modules = coursesArrayElement.modules
     for (const modulesKey in modules) {
         let li = document.createElement('li');
+        li.classList.add('li')
         li.innerText = `${modules[modulesKey]}`;
         section.appendChild(li)
     }
     document.body.appendChild(main)
-    main.append(header, div,section)
+    main.append(header, div, section)
     div.append(div1, div2)
 }
-
-
-
-
-
-

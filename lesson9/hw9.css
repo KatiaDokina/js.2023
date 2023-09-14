@@ -1,0 +1,44 @@
+.body {
+    margin: 0;
+    padding: 0;
+}
+.wrap {
+    text-align: center;
+}
+.wrap p {
+    padding: 0;
+    margin: 0;
+    border: 5px solid greenyellow;
+}
+.member {
+    border: 5px solid blueviolet;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+.main {
+    border: 5px double purple;
+    margin: 5px;
+    padding: 5px;
+}
+.title, .monthDuration, .hourDuration, .modules {
+    border: 2px solid greenyellow;
+    margin: 2px;
+    padding: 5px;
+}
+.div {
+    width: 100%;
+    display: flex;
+}
+.hourDuration {
+    width: 70%;
+}
+.monthDuration {
+    width: 30%;
+}
+.li {
+    border: 0.1px solid hotpink;
+    padding: 2px;
+    margin: 2px;
+}
