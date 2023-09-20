@@ -1,0 +1,73 @@
+#userForm {
+    border: deepskyblue solid 2px;
+    width: 300px;
+    height: 200px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    background-color: lightblue;
+}
+
+#userData {
+    padding: 5px;
+    margin-top: 5px;
+}
+
+#sessions {
+    width: 50%;
+    padding: 5px;
+}
+#userAge {
+    border: deepskyblue solid 2px;
+    width: 300px;
+    height: 100px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+
+    background-color: lightblue;
+}
+table, th, td {
+    border:1px solid black;
+    margin: 5px;
+}
+td {
+    padding: 5px;
+}
+#tableForm {
+    border: deepskyblue solid 2px;
+    width: 300px;
+    height: 200px;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    background-color: greenyellow;
+}
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    width: 50%;
+}
+.main {
+    display: flex;
+    padding: 2px;
+
+}
+.id {
+    border: deepskyblue solid 2px;
+    width: 10%;
+    margin-right: 1px;
+    padding: 2px;
+}
+.title {
+    border: pink solid 2px;
+    width: 90%;
+    padding: 2px;
+}
+#prev, #next {
+    width: 100px;
+    margin: 5px;
+    border: deepskyblue solid 2px;
+}
