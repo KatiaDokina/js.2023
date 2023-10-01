@@ -6,25 +6,32 @@
 
 // 2 Вивести id,name всіх user в index.html. Окремий блок для кожного user.
         let main = document.createElement('main');
-        main.classList.add('main');
+        main.classList.add('mainUser');
+        let divList = document.createElement('div')
+        divList.classList.add('divList')
         let h1 = document.createElement('h1');
-        h1.innerText = `List of users`
+        h1.classList.add('listUser')
+        h1.innerText = `List of users `
+
         for (const user of users) {
+
             let div = document.createElement('div');
             div.classList.add('usersDiv');
-            div.innerText = `${user.id} - ${user.name}`;
+            div.innerText = `${user.id} - ${user.name}` ;
 // 3 Додати кожному блоку кнопку/посилання , при кліку на яку відбувається перехід  на сторінку user-details.html, котра має детальну інфорацію про об'єкт на який клікнули
             let button = document.createElement('button');
             button.classList.add('click');
-            button.innerText = `click`;
+            button.innerText = `user-detail`;
             button.onclick = () => {
                 location.href = 'user-details.html?value=' + JSON.stringify(user)
             }
+
             div.appendChild(button);
             main.appendChild(div);
 
         }
-        document.body.append(h1, main)
+        divList.append(h1)
+        document.body.append(divList,main)
     })
 // На странице user-details.html:
 // 4 Вивести всю, без виключення, інформацію про об'єкт user на який клікнули

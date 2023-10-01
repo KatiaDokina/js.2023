@@ -4,27 +4,33 @@ let url = new URL(location.href);
 url.searchParams.forEach((value) => {
     url = JSON.parse(value)
     let main = document.createElement('main');
-    main.classList.add('main');
+    main.classList.add('mainDetails');
     let h1 = document.createElement('h1');
     h1.innerText = `Information about users`;
     let div = document.createElement('div');
     div.innerText = `id: ${url.id} ,`;
+    div.classList.add('div')
     let section = document.createElement('section');
     section.innerText = `name: ${url.name}, username: ${url.username}   , email: ${url.email} ,`
     let div1 = document.createElement('div');
     div1.innerText = `address: `;
+    div1.classList.add('div')
     let aside = document.createElement('aside');
     aside.innerText = `street: ${url.address.street}, suite: ${url.address.suite}, city: ${url.address.city}, zipcode: ${url.address.zipcode} ,`;
     let div2 = document.createElement('div');
     div2.innerText = `geo: `;
+    div2.classList.add('div')
     let aside1 = document.createElement('aside');
     aside1.innerText = `lat: ${url.address.geo.lat}, lng: ${url.address.geo.lng} ,`;
     let div3 = document.createElement('div');
     div3.innerText = `phone: ${url.phone} ,`;
+    div3.classList.add('div')
     let div4 = document.createElement('div');
     div4.innerText = `website: ${url.website} ,`;
+    div4.classList.add('div')
     let div5 = document.createElement('div');
     div5.innerText = `company: `;
+    div5.classList.add('div')
     let section1 = document.createElement('section');
     section1.innerText = `name: ${url.company.name}, catchPhrase: ${url.company.catchPhrase}, bs: ${url.company.bs} ,`
 
@@ -42,22 +48,26 @@ url.searchParams.forEach((value) => {
         fetch(urlPost)
             .then(value => value.json())
             .then((posts) => {
+                let main = document.createElement('main');
+                main.classList.add('mainTitle');
                 for (const post of posts) {
-                    let div = document.createElement('div');
-                    div.innerText = `${post.title}`;
+                    let divTitlePost = document.createElement('div');
+                    divTitlePost.innerText = `${post.title}`;
+                    divTitlePost.classList.add('divTitlePost')
                     let button = document.createElement('button');
                     button.classList.add('post-details');
                     button.innerText = `post-details`;
                     button.onclick = () => {
                         location.href = 'post-details.html?value=' + JSON.stringify(post)
                     }
-                    div.append(button)
-                    document.body.appendChild(div)
+                    divTitlePost.append(button)
+                    main.append(divTitlePost)
+                    document.body.appendChild(main)
                 }
 
             })
     }
-    main.append(div, section, div1, aside, div2, aside1, div3, div4, div5, section1, buttonPost);
+    main.append(h1,div, section, div1, aside, div2, aside1, div3, div4, div5, section1, buttonPost);
     document.body.appendChild(main);
 })
 
