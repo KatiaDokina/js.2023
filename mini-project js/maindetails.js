@@ -38,7 +38,7 @@ url.searchParams.forEach((value) => {
 // (для получения постов используйте эндпоинт https://jsonplaceholder.typicode.com/users/USER_ID/posts)
 // fetch('https://jsonplaceholder.typicode.com/posts')
     let buttonPost = document.createElement('button');
-    buttonPost.innerText = `post of current user`;
+    buttonPost.innerText = `Post of current user`;
     buttonPost.classList.add('buttonPost');
     let id = url.id
     buttonPost.onclick = function () {
@@ -56,7 +56,7 @@ url.searchParams.forEach((value) => {
                     divTitlePost.classList.add('divTitlePost')
                     let button = document.createElement('button');
                     button.classList.add('post-details');
-                    button.innerText = `post-details`;
+                    button.innerText = `Post-details`;
                     button.onclick = () => {
                         location.href = 'post-details.html?value=' + JSON.stringify(post)
                     }

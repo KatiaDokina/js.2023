@@ -61,7 +61,12 @@ button:hover {
     transition: 2s;
     transform: scale(1.1);
 }
+/*.backButton {*/
+/*    transition: 2s;*/
+/*    transform: scale(1.1);*/
+/*    margin: 100px;*/
 
+/*}*/
 .mainDetails {
     display: flex;
     align-items: center;
@@ -107,7 +112,7 @@ button:hover {
     width: 170px;
 }
 
-.post-details, .click, .buttonPost {
+.post-details, .click, .buttonPost, .backButton {
     margin: 10px;
     padding: 10px;
     border: antiquewhite solid 2px;
@@ -123,6 +128,10 @@ button:hover {
             rgba(63, 52, 107, 0) 0%,
             rgba(82, 115, 235, 0) 84%
     );
+    font-size: 15px;
+}
+.backButton {
+    margin-left: 20px;
 }
 .div {
     font-weight: bolder;

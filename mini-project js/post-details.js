@@ -1,4 +1,5 @@
 //6 Каждому посту додати кнопку/посилання, при кліку на яку відбувається перехід на сторінку post-details.html, котра має детальну інфу про поточний пост.
+
 let url = new URL(location.href);
 url.searchParams.forEach(value => {
     url = JSON.parse(value)
@@ -20,6 +21,8 @@ url.searchParams.forEach(value => {
 //На странице post-details.html:
 // 7 Вивести всю, без виключення, інформацію про об'єкт post на який клікнули .
 // 8 Нижчє інформаці про пост, вивести всі коментарі поточного поста (ендпоінт  - https://jsonplaceholder.typicode.com/posts/POST_ID/comments)
+
+
 let userId = url.userId;
 
 let urlDetailsPost = new URL('https://jsonplaceholder.typicode.com/comments');
@@ -44,12 +47,19 @@ fetch(urlDetailsPost)
             let divBody1 = document.createElement('div');
             divBody1.innerText = `body: ${postDetail.body}`;
 
-
             document.body.appendChild(main);
             main.append(section)
             section.append(divPostId, divId, divName, divEmail, divBody1)
 
+
         }
 
+        let button = document.createElement('button');
+        button.classList.add('backButton');
+        button.innerText = `Back to list of user`;
+        button.onclick = () => {
+            location.href = 'index.html'
+        }
 
+        document.body.appendChild(button)
     })

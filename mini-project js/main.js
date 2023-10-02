@@ -21,7 +21,7 @@
 // 3 Додати кожному блоку кнопку/посилання , при кліку на яку відбувається перехід  на сторінку user-details.html, котра має детальну інфорацію про об'єкт на який клікнули
             let button = document.createElement('button');
             button.classList.add('click');
-            button.innerText = `user-detail`;
+            button.innerText = `User-detail`;
             button.onclick = () => {
                 location.href = 'user-details.html?value=' + JSON.stringify(user)
             }
